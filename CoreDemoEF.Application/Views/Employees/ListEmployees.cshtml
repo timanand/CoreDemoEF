@@ -1,0 +1,36 @@
+﻿
+@model List<CoreDemoEF.Domain.StaffMember>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br>
+<br>
+<h5>List of Staff Members from DB using Entity Framework</h5>
+<a asp-action="Create">Add New Staff</a>
+<br>
+<br>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Actions</th>
+
+    </tr>
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td>@employee.Id</td>
+            <td>@employee.FirstName</td>
+            <td>@employee.LastName</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@employee.Id">Edit</a> /
+                <a asp-action="Delete" asp-route-id="@employee.Id">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
