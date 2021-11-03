@@ -68,7 +68,7 @@ The following are mandatory for the CoreDemoEF application to run :
 		- Done.
 
 
-8. Step 6 creates Database, 'CoreDemoEF' and Table : 'dbo.StaffMembers' in SQL Server.
+8. Step 7 creates Database, 'CoreDemoEF' and Table : 'dbo.StaffMembers' in SQL Server.
 
 
 9. Load Stored Procedure, 'sp_getEmployees' into CoreDemoEF SQL Server Database by following the instructions:
