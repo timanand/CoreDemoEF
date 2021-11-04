@@ -19,12 +19,27 @@ namespace CoreDemoApplication.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult ListEmployees()
+        //[HttpGet]
+        // 04/11/2021 - BEGIN
+        // public IActionResult ListEmployees()
+        // {
+        //     var employees = _uow.StaffRepository.GetAll();
+        //     return View(employees);
+        // }
+
+        public IActionResult ListEmployees(string search=null)
         {
+            if(!string.IsNullOrEmpty(search))
+            {
+                var foundEmployees = _uow.StaffRepository.SearchEmployees(search);
+                return View(foundEmployees);
+            }
+
             var employees = _uow.StaffRepository.GetAll();
             return View(employees);
         }
+
+        // 04/11/2021 - END
 
 
         [HttpGet]

@@ -46,5 +46,14 @@ namespace CoreDemoEF.Data
         {
             _context.StaffMembers.Update(staffMember);
         }
+
+
+        public List<StaffMember> SearchEmployees(string search)
+        {
+            // Return list of Staff Members that match 'First Name', 'Last Name' or ID based on 'search' parameter passed
+            return _context.StaffMembers.Where(p => p.FirstName.Contains(search) || 
+                    p.LastName.Contains(search) ||
+                    p.Id.ToString().Contains(search.ToString())).ToList();
+        }
     }
 }

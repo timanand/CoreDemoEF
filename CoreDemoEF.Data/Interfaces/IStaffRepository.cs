@@ -19,6 +19,7 @@ namespace CoreDemoEF.Data
 
         void Delete(int id);
 
+        List<StaffMember> SearchEmployees(string search);
 
     }
 }

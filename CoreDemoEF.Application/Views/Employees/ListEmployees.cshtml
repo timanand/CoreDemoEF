@@ -12,6 +12,20 @@
 <br>
 
 
+<form asp-action="ListEmployees" method="POST">
+    <div class="row input-group">
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="search" id="search" placeholder="Enter Employee Id, First Name or Last Name" style="width:500px;" />
+        &nbsp;&nbsp;
+        <div class="input-group-btn">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+<br><br>
+
+
+
+
 <table class="table table-bordered">
     <tr>
         <th>Id</th>
