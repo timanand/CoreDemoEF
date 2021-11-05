@@ -39,15 +39,20 @@ The following are mandatory for the CoreDemoEF application to run :
 
 5. Goto Solution Explorer
 
-	Click CoreDemoEF.Application
-		Click 'appsettings.json'
-		
+	Right mouse click on 'CoreDemoEF.Application'
+	Select 'Manage User Secrets'
+	Paste the following :
+
+	  "ConnectionStrings": {
+    		"StaffConnex": "Data Source=; Initial Catalog=CoreDemoEF; 
+				integrated security=false;user id=;password=;"
+  }
+
 			Update the following based on your SQL Server Management Studio settings:
 			
 			Data Source=
 			User Id=
 			Password=
-			
 
 
 6. From 'Build' menu, select 'Rebuild Solution'.
